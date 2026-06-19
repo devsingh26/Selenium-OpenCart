@@ -26,14 +26,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import com.beust.jcommander.Parameter;
-
 public class baseclass 
 {
 	 public static WebDriver driver;
 	 public Logger logger;
 	 public Properties p;
-	    @BeforeClass(groups = {"sainity","Master","Regression"})
+	    @SuppressWarnings("deprecation")
+		@BeforeClass(groups = {"sainity","Master","Regression"})
 	    @Parameters({"os","browser"})
 		public void setup(String os, String br) throws IOException
 	     {
